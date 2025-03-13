@@ -9,7 +9,7 @@ int main() {
     // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
     const int quantCasas = 5;
     int escolha_elemento;
-    int elemento_i = 0;
+    int elemento_i = 1;
 
     // Variáveis para escolhas de movimentação das peças
     int escolha_bispo_diagonal; // Bispo: escolha de diagonal
@@ -45,9 +45,9 @@ int main() {
                     case 1:
                         // Implementação de Movimentação do Bispo
                         // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
-                        for (int i = 0; i <= quantCasas; i++)
+                        for (elemento_i; elemento_i <= quantCasas; elemento_i++)
                         {
-                            printf("Cima\n");
+                            printf("Cima e ");
                             printf("Direita\n");
                         }
                     break;
@@ -55,9 +55,9 @@ int main() {
                     case 2:
                         // Implementação de Movimentação do Bispo
                         // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
-                        for (int i = 0; i <= quantCasas; i++)
+                        for (elemento_i; elemento_i <= quantCasas; elemento_i++)
                         {
-                            printf("Cima\n");
+                            printf("Cima e ");
                             printf("Esquerda\n");
                         }
                     break;
@@ -65,9 +65,9 @@ int main() {
                     case 3:
                         // Implementação de Movimentação do Bispo
                         // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
-                        for (int i = 0; i <= quantCasas; i++)
+                        for (elemento_i; elemento_i <= quantCasas; elemento_i++)
                         {
-                            printf("Baixo\n");
+                            printf("Baixo e ");
                             printf("Direita\n");
                         }
                     break;
@@ -75,9 +75,9 @@ int main() {
                     case 4:
                         // Implementação de Movimentação do Bispo
                         // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
-                        for (int i = 0; i <= quantCasas; i++)
+                        for (elemento_i; elemento_i <= quantCasas; elemento_i++)
                         {
-                            printf("Baixo\n");
+                            printf("Baixo e ");
                             printf("Esquerda\n");
                         }
                     break;
