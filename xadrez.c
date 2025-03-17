@@ -274,18 +274,16 @@ int main()
                         // Loops aninhados
                         for (int i = 1; i <= cavalo_casa_inicial; i++) // loop externo
                         {
+                            // O cavalo pulará uma casa à sua frente
+                            printf("O cavalo pulou uma casa à sua frente\n");
+
                             // Loop para ir a casa final do cavalo
-                            for (int j = 1; j <= cavalo_casa_destino; j++)
+                            for (int j = 1; j <= cavalo_casa_inicial; j++)
                             {
-                                // O cavalo pulará uma casa à sua frente
-                                // Quando?
-                                // Quando J for igual a i
-                                if (j == i)
+                                // O cavalo para quando i for igual a quantidade de casas iniciais
+                                if (i >= cavalo_casa_inicial)
                                 {
-                                    printf("O cavalo pulou uma casa à sua frente\n");
-                                } else
-                                {
-                                    printf("O cavalo parou à esquerda da última casa\n");
+                                    printf("O cavalo parou na casa à esquerda da última casa pulada\n");
                                 }
                             }
                         }
