@@ -275,7 +275,7 @@ int main()
                         for (int i = 1; i <= cavalo_casa_inicial; i++) // loop externo
                         {
                             // Loop para ir a casa final do cavalo
-                            for (int j = 0; j == cavalo_casa_destino - 1; j++)
+                            for (int j = 1; j <= cavalo_casa_destino; j++)
                             {
                                 // O cavalo pulará uma casa à sua frente
                                 // Quando?
@@ -283,6 +283,9 @@ int main()
                                 if (j == i)
                                 {
                                     printf("O cavalo pulou uma casa à sua frente\n");
+                                } else
+                                {
+                                    printf("O cavalo parou à esquerda da última casa\n");
                                 }
                             }
                         }
