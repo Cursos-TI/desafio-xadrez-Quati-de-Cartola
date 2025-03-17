@@ -281,7 +281,7 @@ int main()
                             for (int j = 1; j <= cavalo_casa_inicial; j++)
                             {
                                 // O cavalo para quando i for igual a quantidade de casas iniciais
-                                if (i >= cavalo_casa_inicial)
+                                if (i == cavalo_casa_inicial)
                                 {
                                     printf("O cavalo parou na casa à esquerda da última casa pulada\n");
                                 }
