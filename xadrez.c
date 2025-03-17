@@ -12,9 +12,10 @@ int main() {
     int elemento_i = 1;
 
     // Variáveis para escolhas de movimentação das peças
-    int escolha_bispo_diagonal; // Bispo: escolha de diagonal
-    int escolha_torre_dir;      // Torre: escolha de direção
-    int escolha_dama_direcao;   // Dama : escolha de direção (ou diagonal)
+    int escolha_bispo_diagonal; // Bispo : escolha de diagonal
+    int escolha_torre_dir;      // Torre : escolha de direção
+    int escolha_dama_direcao;   // Dama  : escolha de direção (ou diagonal)
+    int escolha_cavalo_direcao; // Cavalo: escolha de direção para cavalo
 
     // O usuário podendo escolher qual peça ele irá mover
     printf("#################################\n");
@@ -245,6 +246,6 @@ int main() {
         
         break;
     }
-    
+
     return 0;
 }
