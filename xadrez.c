@@ -19,7 +19,7 @@ int main()
     int escolha_cavalo_direcao; // Cavalo: escolha de direção para cavalo
         // Mais variáveis para o cavalo
         int cavalo_casa_inicial = 2; // Casas que o cavalo pula
-        int cavalo_casa_destino = 3; // Casa final a qual o cavalo pulará 
+        int cavalo_casa_destino = 1; // Casa final a qual o cavalo pulará 
 
     // O usuário podendo escolher qual peça ele irá mover
     printf("#################################\n");
@@ -253,9 +253,7 @@ int main()
 
         // Escolha de Cavalo
         case 4:
-            // Usando loop aninhado para mover-se a direita
-            int movimento_completo = 1;
-            while (movimento_completo--) {
+            while (cavalo_casa_destino--) {
                 for (int i = 0; i < cavalo_casa_inicial; i++) {
                     printf("Pulando casa para cima\n");
                 }
