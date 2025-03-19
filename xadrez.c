@@ -15,6 +15,7 @@ int escolha_cavalo_direcao; // Cavalo: escolha de direção para cavalo
     int cavalo_casa_destino = 1; // Casa final a qual o cavalo pulará 
 //========================================================================
 // Funções para movimentação de peças com recursividade
+// Para movimentação da torre
 void mover_torre(int casas)
 {
     switch(escolha_torre_dir) {
@@ -48,15 +49,106 @@ void mover_torre(int casas)
         break;
     }
 }
+// Para movimentação do Bispo
 void mover_bispo(int casas)
 {
     switch(escolha_bispo_diagonal) {
-        // Diagonal para direita
+        // Diagonal para direita superior
         case 1:
             if (casas > 0) {
                 printf("Cima e ");
                 printf("Direita\n");
                 mover_bispo(casas - 1);
+            }
+        break;
+        // Diagonal para esquerda superior
+        case 2:
+            if (casas > 0) {
+                printf("Cima e ");
+                printf("Esquerda\n");
+                mover_bispo(casas - 1);
+            }
+        break;
+        // Diagonal para direita inferior
+        case 3:
+            if (casas > 0) {
+                printf("Baixo e ");
+                printf("direita\n");
+                mover_bispo(casas - 1);
+            }
+        break;
+        // Diagonal para esquerda inferior
+        case 4:
+            if (casas > 0) {
+                printf("Baixo e ");
+                printf("Esquerda\n");
+                mover_bispo(casas - 1);
+            }
+        break;
+    }
+}
+// Para movimentação da Dama
+void mover_dama(int casas) 
+{
+    switch(escolha_bispo_diagonal) {
+        // Diagonal para direita superior
+        case 1:
+            if (casas > 0) {
+                printf("Cima e ");
+                printf("Direita\n");
+                mover_bispo(casas - 1);
+            }
+        break;
+        // Diagonal para esquerda superior
+        case 2:
+            if (casas > 0) {
+                printf("Cima e ");
+                printf("Esquerda\n");
+                mover_bispo(casas - 1);
+            }
+        break;
+        // Diagonal para direita inferior
+        case 3:
+            if (casas > 0) {
+                printf("Baixo e ");
+                printf("direita\n");
+                mover_bispo(casas - 1);
+            }
+        break;
+        // Diagonal para esquerda inferior
+        case 4:
+            if (casas > 0) {
+                printf("Baixo e ");
+                printf("Esquerda\n");
+                mover_bispo(casas - 1);
+            }
+        break;
+        // Movendo-se a direita
+        case 5:
+            if (casas > 0) {
+                printf("Indo uma casa a direita\n");
+                mover_torre(casas - 1);
+            }
+        break;
+        // Movendo-se a esquerda
+        case 6:
+            if (casas > 0) {
+                printf("Indo uma casa a esquerda\n");
+                mover_torre(casas - 1);
+            }
+        break;
+        // Movendo-se para cima
+        case 7:
+            if (casas > 0) {
+                printf("Indo uma casa para cima\n");
+                mover_torre(casas - 1);
+            }
+        break;
+        // Movendo-se para baixo
+        case 8:
+            if (casas > 0) {
+                printf("Indo uma casa para baixo\n");
+                mover_torre(casas - 1);
             }
         break;
     }
@@ -88,51 +180,7 @@ int main()
             printf("4. Diagonal inferior para esquerda\n");
             scanf("%d", &escolha_bispo_diagonal);
 
-                // Escolha de qual diagonal o jogador quer se mover
-                switch(escolha_bispo_diagonal)
-                {
-                    // Diagonal superior para direita
-                    case 1:
-                        // Implementação de Movimentação do Bispo
-                        // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
-                        for (elemento_i; elemento_i <= quantCasas; elemento_i++)
-                        {
-                            printf("Cima e ");
-                            printf("Direita\n");
-                        }
-                    break;
-                    // Diagonal superior para esquerda
-                    case 2:
-                        // Implementação de Movimentação do Bispo
-                        // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
-                        for (elemento_i; elemento_i <= quantCasas; elemento_i++)
-                        {
-                            printf("Cima e ");
-                            printf("Esquerda\n");
-                        }
-                    break;
-                    // Diagonal inferior para direita
-                    case 3:
-                        // Implementação de Movimentação do Bispo
-                        // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
-                        for (elemento_i; elemento_i <= quantCasas; elemento_i++)
-                        {
-                            printf("Baixo e ");
-                            printf("Direita\n");
-                        }
-                    break;
-                    // Diagonal inferior para esquerda
-                    case 4:
-                        // Implementação de Movimentação do Bispo
-                        // Sugestão: Utilize uma estrutura de repetição para simular a movimentação do Bispo em diagonal.
-                        for (elemento_i; elemento_i <= quantCasas; elemento_i++)
-                        {
-                            printf("Baixo e ");
-                            printf("Esquerda\n");
-                        }
-                    break;
-                }
-        
+            mover_bispo(5);
         break;
 
         // Escolha de Torre
@@ -164,91 +212,8 @@ int main()
             printf("8. Baixo\n");
             scanf("%d", &escolha_dama_direcao);
 
-                // Escolha de qual diagonal o jogador quer se mover
-                switch(escolha_dama_direcao)
-                {
-                    // Diagonal superior para direita
-                    case 1:
-                        // Implementação de Movimentação da dama
-                        // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Dama em diagonal.
-                        for (elemento_i; elemento_i <= quantCasas; elemento_i++)
-                        {
-                            printf("Cima e ");
-                            printf("Direita\n");
-                        }
-                    break;
-                    // Diagonal superior para esquerda
-                    case 2:
-                        // Implementação de Movimentação da Dama
-                        // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da dama em diagonal.
-                        for (elemento_i; elemento_i <= quantCasas; elemento_i++)
-                        {
-                            printf("Cima e ");
-                            printf("Esquerda\n");
-                        }
-                    break;
-                    // Diagonal inferior para direita
-                    case 3:
-                        // Implementação de Movimentação da Dama
-                        // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da dama em diagonal.
-                        for (elemento_i; elemento_i <= quantCasas; elemento_i++)
-                        {
-                            printf("Baixo e ");
-                            printf("Direita\n");
-                        }
-                    break;
-                    // Diagonal inferior para esquerda
-                    case 4:
-                        // Implementação de Movimentação da Dama
-                        // Sugestão: Utilize uma estrutura de repetição para simular a movimentação da Dama em diagonal.
-                        for (elemento_i; elemento_i <= quantCasas; elemento_i++)
-                        {
-                            printf("Baixo e ");
-                            printf("Esquerda\n");
-                        }
-                    break;
-                    // Direita
-                    case 5:
-                        while (elemento_i <= quantCasas)
-                        {
-                            // Imprimindo para ir a direita
-                            printf("Direita\n");
-                            // evitando loop infinito
-                            elemento_i++;
-                        }
-                    break;
-                    // Esquerda
-                    case 6:
-                        while (elemento_i <= quantCasas)
-                        {
-                            // Imprimindo para ir a direita
-                            printf("Esquerda\n");
-                            // evitando loop infinito
-                            elemento_i++;
-                        }
-                    break;
-                    // Cima
-                    case 7:
-                        while (elemento_i <= quantCasas)
-                        {
-                            // Imprimindo para ir a direita
-                            printf("Cima\n");
-                            // evitando loop infinito
-                            elemento_i++;
-                        }
-                    break;
-                    // Baixo
-                    case 8:
-                        do
-                        {
-                            // Fazendo uma vez
-                            printf("Baixo\n");
-                            // Aumentando um no elemento_i
-                            elemento_i++; // evitando loop infinito
-                        } while(elemento_i <= quantCasas);
-                    break;
-                }
-        
+            mover_dama(5);
+            
         break;
 
         // Escolha de Cavalo
