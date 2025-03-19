@@ -1,59 +1,69 @@
 #include <stdio.h>
 
-// Desafio de Xadrez - MateCheck
-// Este código inicial serve como base para o desenvolvimento do sistema de movimentação das peças de xadrez.
-// O objetivo é utilizar estruturas de repetição e funções para determinar os limites de movimentação dentro do jogo.
+//========================================================================
+const int quantCasas = 5;
+int escolha_elemento;
+int elemento_i = 1;
+
+// Variáveis para escolhas de movimentação das peças
+int escolha_bispo_diagonal; // Bispo : escolha de diagonal
+int escolha_torre_dir;      // Torre : escolha de direção
+int escolha_dama_direcao;   // Dama  : escolha de direção (ou diagonal)
+int escolha_cavalo_direcao; // Cavalo: escolha de direção para cavalo
+    // Mais variáveis para o cavalo
+    int cavalo_casa_inicial = 2; // Casas que o cavalo pula
+    int cavalo_casa_destino = 1; // Casa final a qual o cavalo pulará 
+//========================================================================
+// Funções para movimentação de peças com recursividade
+void mover_torre(int casas)
+{
+    switch(escolha_torre_dir) {
+        // Movendo-se a direita
+        case 1:
+            if (casas > 0) {
+                printf("Indo uma casa a direita\n");
+                mover_torre(casas - 1);
+            }
+        break;
+        // Movendo-se a esquerda
+        case 2:
+            if (casas > 0) {
+                printf("Indo uma casa a esquerda\n");
+                mover_torre(casas - 1);
+            }
+        break;
+        // Movendo-se para cima
+        case 3:
+            if (casas > 0) {
+                printf("Indo uma casa para cima\n");
+                mover_torre(casas - 1);
+            }
+        break;
+        // Movendo-se para baixo
+        case 4:
+            if (casas > 0) {
+                printf("Indo uma casa para baixo\n");
+                mover_torre(casas - 1);
+            }
+        break;
+    }
+}
+void mover_bispo(int casas)
+{
+    switch(escolha_bispo_diagonal) {
+        // Diagonal para direita
+        case 1:
+            if (casas > 0) {
+                printf("Cima e ");
+                printf("Direita\n");
+                mover_bispo(casas - 1);
+            }
+        break;
+    }
+}
 
 int main()
 {
-    // Nível Novato - Movimentação das Peças
-    // Sugestão: Declare variáveis constantes para representar o número de casas que cada peça pode se mover.
-    const int quantCasas = 5;
-    int escolha_elemento;
-    int elemento_i = 1;
-
-    // Variáveis para escolhas de movimentação das peças
-    int escolha_bispo_diagonal; // Bispo : escolha de diagonal
-    int escolha_torre_dir;      // Torre : escolha de direção
-    int escolha_dama_direcao;   // Dama  : escolha de direção (ou diagonal)
-    int escolha_cavalo_direcao; // Cavalo: escolha de direção para cavalo
-        // Mais variáveis para o cavalo
-        int cavalo_casa_inicial = 2; // Casas que o cavalo pula
-        int cavalo_casa_destino = 1; // Casa final a qual o cavalo pulará 
-
-    // Funções para movimentação de peças com recursividade
-    void mover_torre(int casas) {
-        switch(escolha_torre_dir) {
-            // Movendo-se a direita
-            case 1:
-                if (casas > 0) {
-                    printf("Indo uma casa a direita\n");
-                    mover_torre(casas - 1);
-                }
-            break;
-            // Movendo-se a esquerda
-            case 2:
-                if (casas > 0) {
-                    printf("Indo uma casa a esquerda\n");
-                    mover_torre(casas - 1);
-                }
-            break;
-            // Movendo-se para cima
-            case 3:
-                if (casas > 0) {
-                    printf("Indo uma casa para cima\n");
-                    mover_torre(casas - 1);
-                }
-            break;
-            // Movendo-se para baixo
-            case 4:
-                if (casas > 0) {
-                    printf("Indo uma casa para baixo\n");
-                    mover_torre(casas - 1);
-                }
-            break;
-        }
-    }
     // O usuário podendo escolher qual peça ele irá mover
     printf("#################################\n");
     printf("Bem-Vindo ao jogo de Xadrez!\n");
