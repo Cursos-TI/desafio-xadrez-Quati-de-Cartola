@@ -156,17 +156,6 @@ void mover_dama(int casas)
 // Função para movimentação do cavalo
 void mover_cavalo()
 {
-    /*printf("#################################\n");
-            printf("Escolha qual direção você quer mexer o cavalo:\n");
-            printf("1. Para frente à esquerda\n");
-            printf("2. Para frente à direita\n");
-            printf("3. Para esquerda à cima\n");
-            printf("4. Para esquerda à baixo\n");
-            printf("5. Para direita à cima\n");
-            printf("6. Para direita à baixo\n");
-            printf("7. Para baixo à esquerda\n");
-            printf("8. Para baixo à direita\n");
-            scanf("%d", &escolha_cavalo_direcao);*/
     switch (escolha_cavalo_direcao)
     {
         // Frente à esquerda
