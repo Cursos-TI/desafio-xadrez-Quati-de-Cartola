@@ -253,7 +253,16 @@ int main()
 
         // Escolha de Cavalo
         case 4:
+            // Usando loop aninhado para mover-se a direita
+            int movimento_completo = 1;
+            while (movimento_completo--) {
+                for (int i = 0; i < cavalo_casa_inicial; i++) {
+                    printf("Pulando casa para cima\n");
+                }
+                printf("Parando na casa para direita\n");
+            }
             // O jogador escolhe qual direção ele quer ir
+            /*
             printf("#################################\n");
             printf("Escolha qual direção você quer mexer o cavalo:\n");
             printf("1. Para frente à esquerda\n");
@@ -413,6 +422,7 @@ int main()
                             }
                         }
                     break;
+                    */
         
         break;
     }
