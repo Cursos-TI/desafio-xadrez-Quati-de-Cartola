@@ -27,13 +27,31 @@ int main()
             // Movendo-se a direita
             case 1:
                 if (casas > 0) {
-                    printf("Indo uma casa a direita");
+                    printf("Indo uma casa a direita\n");
                     mover_torre(casas - 1);
                 }
             break;
             // Movendo-se a esquerda
+            case 2:
+                if (casas > 0) {
+                    printf("Indo uma casa a esquerda\n");
+                    mover_torre(casas - 1);
+                }
+            break;
             // Movendo-se para cima
+            case 3:
+                if (casas > 0) {
+                    printf("Indo uma casa para cima\n");
+                    mover_torre(casas - 1);
+                }
+            break;
             // Movendo-se para baixo
+            case 4:
+                if (casas > 0) {
+                    printf("Indo uma casa para baixo\n");
+                    mover_torre(casas - 1);
+                }
+            break;
         }
     }
     // O usuário podendo escolher qual peça ele irá mover
