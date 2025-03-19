@@ -21,6 +21,21 @@ int main()
         int cavalo_casa_inicial = 2; // Casas que o cavalo pula
         int cavalo_casa_destino = 1; // Casa final a qual o cavalo pulará 
 
+    // Funções para movimentação de peças com recursividade
+    void mover_torre(int casas) {
+        switch(escolha_torre_dir) {
+            // Movendo-se a direita
+            case 0:
+                if (casas > 0) {
+                    printf("Indo uma casa a direita");
+                    mover_torre(casas - 1);
+                }
+            break;
+            // Movendo-se a esquerda
+            // Movendo-se para cima
+            // Movendo-se para baixo
+        }
+    }
     // O usuário podendo escolher qual peça ele irá mover
     printf("#################################\n");
     printf("Bem-Vindo ao jogo de Xadrez!\n");
@@ -102,51 +117,8 @@ int main()
             printf("3. Cima\n");
             printf("4. Baixo\n");
             scanf("%d", &escolha_torre_dir);
-
-                // Escolha de qual direção o jogador quer se mover com a torre
-                switch(escolha_torre_dir)
-                {
-                    // Direita
-                    case 1:
-                        while (elemento_i <= quantCasas)
-                        {
-                            // Imprimindo para ir a direita
-                            printf("Direita\n");
-                            // evitando loop infinito
-                            elemento_i++;
-                        }
-                    break;
-                    // Esquerda
-                    case 2:
-                        while (elemento_i <= quantCasas)
-                        {
-                            // Imprimindo para ir a direita
-                            printf("Esquerda\n");
-                            // evitando loop infinito
-                            elemento_i++;
-                        }
-                    break;
-                    // Cima
-                    case 3:
-                        while (elemento_i <= quantCasas)
-                        {
-                            // Imprimindo para ir a direita
-                            printf("Cima\n");
-                            // evitando loop infinito
-                            elemento_i++;
-                        }
-                    break;
-                    // Baixo
-                    case 4:
-                        while (elemento_i <= quantCasas)
-                        {
-                            // Imprimindo para ir a direita
-                            printf("Baixo\n");
-                            // evitando loop infinito
-                            elemento_i++;
-                        }
-                    break;
-                }
+            
+            mover_torre(5);
         break;
 
         // Escolha de rainha (dama)
