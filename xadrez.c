@@ -154,7 +154,7 @@ void mover_dama(int casas)
     }
 }
 // Função para movimentação do cavalo
-void mover_cavalo(int casas)
+void mover_cavalo()
 {
     /*printf("#################################\n");
             printf("Escolha qual direção você quer mexer o cavalo:\n");
@@ -173,12 +173,89 @@ void mover_cavalo(int casas)
         case 1:
             while (cavalo_casa_destino--)
             {
-                for (int i = 1; i < cavalo_casa_inicial; i++)
+                for (int i = 1; i <= cavalo_casa_inicial; i++)
                 {
                     printf("Pulando uma casa a nossa frente\n");
                 }
-                printf("Parou na casa a esquerda\n");
+                printf("Parou na casa para a esquerda\n");
             }
+        break;
+        // Frente à direita
+        case 2:
+        while (cavalo_casa_destino--)
+        {
+            for (int i = 1; i <= cavalo_casa_inicial; i++)
+            {
+                printf("Pulando uma casa a nossa frente\n");
+            }
+            printf("Parou na casa para a direita\n");
+        }
+        break;
+        // Esquerda Cima
+        case 3:
+        while (cavalo_casa_destino--)
+        {
+            for (int i = 1; i <= cavalo_casa_inicial; i++)
+            {
+                printf("Pulando uma casa para esquerda\n");
+            }
+            printf("Parou na casa para cima\n");
+        }
+        break;
+        // esquerda baixo
+        case 4:
+        while (cavalo_casa_destino--)
+        {
+            for (int i = 1; i <= cavalo_casa_inicial; i++)
+            {
+                printf("Pulando uma casa para esquerda\n");
+            }
+            printf("Parou na casa para baixo\n");
+        }
+        break;
+        // Direita Cima
+        case 5:
+        while (cavalo_casa_destino--)
+        {
+            for (int i = 1; i <= cavalo_casa_inicial; i++)
+            {
+                printf("Pulando uma casa para direita\n");
+            }
+            printf("Parou na casa para cima\n");
+        }
+        break;
+        // Direita baixo
+        case 6:
+        while (cavalo_casa_destino--)
+        {
+            for (int i = 1; i <= cavalo_casa_inicial; i++)
+            {
+                printf("Pulando uma casa para direita\n");
+            }
+            printf("Parou na casa para baixo\n");
+        }
+        break;
+        // Baixo à esquerda
+        case 7:
+            while (cavalo_casa_destino--)
+            {
+                for (int i = 1; i <= cavalo_casa_inicial; i++)
+                {
+                    printf("Pulando uma casa para trás\n");
+                }
+                printf("Parou na casa para a esquerda\n");
+            }
+        break;
+        // Baixo à direita
+        case 8:
+        while (cavalo_casa_destino--)
+        {
+            for (int i = 1; i <= cavalo_casa_inicial; i++)
+            {
+                printf("Pulando uma casa para trás\n");
+            }
+            printf("Parou na casa para a direita\n");
+        }
         break;
     }
 }
@@ -259,7 +336,7 @@ int main()
             printf("8. Para baixo à direita\n");
             scanf("%d", &escolha_cavalo_direcao);
 
-            mover_cavalo(5);
+            mover_cavalo();
         
         break;
     }
