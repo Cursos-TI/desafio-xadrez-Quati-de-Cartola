@@ -90,13 +90,13 @@ void mover_bispo(int casas)
 // Para movimentação da Dama
 void mover_dama(int casas) 
 {
-    switch(escolha_bispo_diagonal) {
+    switch(escolha_dama_direcao) {
         // Diagonal para direita superior
         case 1:
             if (casas > 0) {
                 printf("Cima e ");
                 printf("Direita\n");
-                mover_bispo(casas - 1);
+                mover_dama(casas - 1);
             }
         break;
         // Diagonal para esquerda superior
@@ -104,7 +104,7 @@ void mover_dama(int casas)
             if (casas > 0) {
                 printf("Cima e ");
                 printf("Esquerda\n");
-                mover_bispo(casas - 1);
+                mover_dama(casas - 1);
             }
         break;
         // Diagonal para direita inferior
@@ -112,7 +112,7 @@ void mover_dama(int casas)
             if (casas > 0) {
                 printf("Baixo e ");
                 printf("direita\n");
-                mover_bispo(casas - 1);
+                mover_dama(casas - 1);
             }
         break;
         // Diagonal para esquerda inferior
@@ -120,35 +120,35 @@ void mover_dama(int casas)
             if (casas > 0) {
                 printf("Baixo e ");
                 printf("Esquerda\n");
-                mover_bispo(casas - 1);
+                mover_dama(casas - 1);
             }
         break;
         // Movendo-se a direita
         case 5:
             if (casas > 0) {
                 printf("Indo uma casa a direita\n");
-                mover_torre(casas - 1);
+                mover_dama(casas - 1);
             }
         break;
         // Movendo-se a esquerda
         case 6:
             if (casas > 0) {
                 printf("Indo uma casa a esquerda\n");
-                mover_torre(casas - 1);
+                mover_dama(casas - 1);
             }
         break;
         // Movendo-se para cima
         case 7:
             if (casas > 0) {
                 printf("Indo uma casa para cima\n");
-                mover_torre(casas - 1);
+                mover_dama(casas - 1);
             }
         break;
         // Movendo-se para baixo
         case 8:
             if (casas > 0) {
                 printf("Indo uma casa para baixo\n");
-                mover_torre(casas - 1);
+                mover_dama(casas - 1);
             }
         break;
     }
@@ -213,7 +213,7 @@ int main()
             scanf("%d", &escolha_dama_direcao);
 
             mover_dama(5);
-            
+
         break;
 
         // Escolha de Cavalo
