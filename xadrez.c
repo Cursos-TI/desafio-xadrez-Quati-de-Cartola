@@ -153,6 +153,35 @@ void mover_dama(int casas)
         break;
     }
 }
+// Função para movimentação do cavalo
+void mover_cavalo(int casas)
+{
+    /*printf("#################################\n");
+            printf("Escolha qual direção você quer mexer o cavalo:\n");
+            printf("1. Para frente à esquerda\n");
+            printf("2. Para frente à direita\n");
+            printf("3. Para esquerda à cima\n");
+            printf("4. Para esquerda à baixo\n");
+            printf("5. Para direita à cima\n");
+            printf("6. Para direita à baixo\n");
+            printf("7. Para baixo à esquerda\n");
+            printf("8. Para baixo à direita\n");
+            scanf("%d", &escolha_cavalo_direcao);*/
+    switch (escolha_cavalo_direcao)
+    {
+        // Frente à esquerda
+        case 1:
+            while (cavalo_casa_destino--)
+            {
+                for (int i = 1; i < cavalo_casa_inicial; i++)
+                {
+                    printf("Pulando uma casa a nossa frente\n");
+                }
+                printf("Parou na casa a esquerda\n");
+            }
+        break;
+    }
+}
 
 int main()
 {
@@ -218,14 +247,6 @@ int main()
 
         // Escolha de Cavalo
         case 4:
-            while (cavalo_casa_destino--) {
-                for (int i = 0; i < cavalo_casa_inicial; i++) {
-                    printf("Pulando casa para cima\n");
-                }
-                printf("Parando na casa para direita\n");
-            }
-            // O jogador escolhe qual direção ele quer ir
-            /*
             printf("#################################\n");
             printf("Escolha qual direção você quer mexer o cavalo:\n");
             printf("1. Para frente à esquerda\n");
@@ -238,154 +259,7 @@ int main()
             printf("8. Para baixo à direita\n");
             scanf("%d", &escolha_cavalo_direcao);
 
-                // Escolha de qual diagonal o jogador quer se mover
-                switch(escolha_cavalo_direcao)
-                {
-                    // Para frente à esquerda
-                    case 1:
-                        // Loops aninhados
-                        for (int i = 1; i <= cavalo_casa_inicial; i++) // loop externo
-                        {
-                            // O cavalo pulará uma casa à sua frente
-                            printf("O cavalo pulou uma casa à sua frente\n");
-
-                            // Loop interno para verificar se o cavalo atingiu a última casa
-                            for (int j = 1; j <= 1; j++)
-                            {
-                                // SE i chegou no limite de pular casas
-                                if (i == cavalo_casa_inicial) {
-                                    printf("O cavalo parou à esquerda da última casa\n");
-                                }
-                            }   
-                        }
-                    break;
-                    // Para frente à direita
-                    case 2:
-                        // Loops aninhados
-                        for (int i = 1; i <= cavalo_casa_inicial; i++) // loop externo
-                        {
-                            // O cavalo pulará uma casa à sua frente
-                            printf("O cavalo pulou uma casa à sua frente\n");
-
-                            // Loop interno para verificar se o cavalo atingiu a última casa
-                            for (int j = 1; j <= 1; j++)
-                            {
-                                // SE i chegou no limite de pular casas
-                                if (i == cavalo_casa_inicial) {
-                                    printf("O cavalo parou à direita da última casa\n");
-                                }
-                            }
-                        }
-                    break;
-                    // Para esquerda à cima
-                    case 3:
-                        // Loops aninhados
-                        for (int i = 1; i <= cavalo_casa_inicial; i++) // loop externo
-                        {
-                            // O cavalo pulará uma casa à sua esquerda
-                            printf("O cavalo pulou uma casa à sua esquerda\n");
-
-                            // Loop interno para verificar se o cavalo atingiu a última casa
-                            for (int j = 1; j <= 1; j++)
-                            {
-                                // SE i chegou no limite de pular casas
-                                if (i == cavalo_casa_inicial) {
-                                    printf("O cavalo parou à cima da última casa\n");
-                                }
-                            }
-                        }
-                    break;
-                    // Para esquerda à baixo
-                    case 4:
-                        // Loops aninhados
-                        for (int i = 1; i <= cavalo_casa_inicial; i++) // loop externo
-                        {
-                            // O cavalo pulará uma casa à sua esquerda
-                            printf("O cavalo pulou uma casa à sua esquerda\n");
-
-                            // Loop interno para verificar se o cavalo atingiu a última casa
-                            for (int j = 1; j <= 1; j++)
-                            {
-                                // SE i chegou no limite de pular casas
-                                if (i == cavalo_casa_inicial) {
-                                    printf("O cavalo parou à baixo da última casa\n");
-                                }
-                            }
-                        }
-                    break;
-                    // Para direita à cima
-                    case 5:
-                        // Loops aninhados
-                        for (int i = 1; i <= cavalo_casa_inicial; i++) // loop externo
-                        {
-                            // O cavalo pulará uma casa à sua direita
-                            printf("O cavalo pulou uma casa à sua direita\n");
-
-                            // Loop interno para verificar se o cavalo atingiu a última casa
-                            for (int j = 1; j <= 1; j++)
-                            {
-                                // SE i chegou no limite de pular casas
-                                if (i == cavalo_casa_inicial) {
-                                    printf("O cavalo parou à cima da última casa\n");
-                                }
-                            }
-                        }
-                    break;
-                    // Para direita à baixo
-                    case 6:
-                        // Loops aninhados
-                        for (int i = 1; i <= cavalo_casa_inicial; i++) // loop externo
-                        {
-                            // O cavalo pulará uma casa à sua direita
-                            printf("O cavalo pulou uma casa à sua direita\n");
-
-                            // Loop interno para verificar se o cavalo atingiu a última casa
-                            for (int j = 1; j <= 1; j++)
-                            {
-                                // SE i chegou no limite de pular casas
-                                if (i == cavalo_casa_inicial) {
-                                    printf("O cavalo parou à baixo da última casa\n");
-                                }
-                            }
-                        }
-                    break;
-                    // Para baixo à esquerda
-                    case 7:
-                        // Loops aninhados
-                        for (int i = 1; i <= cavalo_casa_inicial; i++) // loop externo
-                        {
-                            // O cavalo pulará uma casa a baixo
-                            printf("O cavalo pulou uma casa a baixo\n");
-
-                            // Loop interno para verificar se o cavalo atingiu a última casa
-                            for (int j = 1; j <= 1; j++)
-                            {
-                                // SE i chegou no limite de pular casas
-                                if (i == cavalo_casa_inicial) {
-                                    printf("O cavalo parou à esquerda da última casa\n");
-                                }
-                            }
-                        }
-                    break;
-                    // Para baixo à direita
-                    case 8:
-                        // Loops aninhados
-                        for (int i = 1; i <= cavalo_casa_inicial; i++) // loop externo
-                        {
-                            // O cavalo pulará uma casa a baixo
-                            printf("O cavalo pulou uma casa a baixo\n");
-
-                            // Loop interno para verificar se o cavalo atingiu a última casa
-                            for (int j = 1; j <= 1; j++)
-                            {
-                                // SE i chegou no limite de pular casas
-                                if (i == cavalo_casa_inicial) {
-                                    printf("O cavalo parou à direita da última casa\n");
-                                }
-                            }
-                        }
-                    break;
-                    */
+            mover_cavalo(5);
         
         break;
     }
