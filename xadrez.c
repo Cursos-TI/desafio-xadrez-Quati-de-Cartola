@@ -25,7 +25,7 @@ int main()
     void mover_torre(int casas) {
         switch(escolha_torre_dir) {
             // Movendo-se a direita
-            case 0:
+            case 1:
                 if (casas > 0) {
                     printf("Indo uma casa a direita");
                     mover_torre(casas - 1);
